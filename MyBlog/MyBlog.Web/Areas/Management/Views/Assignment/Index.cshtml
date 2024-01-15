@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Assignment>
+
+<a href="/Management/Assignment/Create" class="btn btn-primary">Yeni Ekle</a>
+
+<div class="card radius-15">
+	<div class="card-body">
+		<div class="card-title">
+			<h4 class="mb-0">Proje Listesi</h4>
+			@* <p>@Model.Count()</p> *@
+			<p>@ViewBag.AssignmentCount adet proje bulundu</p>
+		</div>
+		<hr>
+		<div class="table-responsive">
+			<table class="table mb-0">
+				<thead>
+					<tr>
+						<th scope="col">Id</th>
+						<th scope="col">Başlık</th>
+					 
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var item in Model) {
+						<tr>
+							<th scope="row">@item.Id</th>
+							<td>@item.Title</td>
+							 
+							<td>
+								<a class="btn btn-success"
+								   href="/Management/Assignment/Details/@item.Id">Detay</a>
+
+								<a class="btn btn-warning"
+								   href="/Management/Assignment/Edit/@item.Id">Düzenle</a>
+
+								<a class="btn btn-danger"
+								   href="/Management/Assignment/Delete/@item.Id">Sil</a>
+							</td>
+						</tr>
+					}
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

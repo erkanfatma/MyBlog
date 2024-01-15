@@ -1,0 +1,24 @@
+﻿@model ArticleTag
+
+<div class="card">
+    <div class="card-body">
+        <form method="post">
+
+            <label asp-for="ArticleId"></label>
+            <select asp-for="ArticleId" asp-items="@ViewBag.ArticleId" class="form-control">
+            </select>
+            <span class="text-danger" asp-validation-for="ArticleId"></span>
+
+            <label asp-for="TagId"></label>
+            <select asp-for="TagId" asp-items="@ViewBag.TagId" class="form-control">
+            </select>
+            <span class="text-danger" asp-validation-for="TagId"></span>
+
+            <input type="submit" value="Kaydet" class="btn btn-primary" />
+
+            <p class="text text-danger">
+                @ViewBag.ErrorMessage
+            </p>
+        </form>
+    </div>
+</div>

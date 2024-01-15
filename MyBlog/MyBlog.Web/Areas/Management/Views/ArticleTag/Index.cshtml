@@ -1,0 +1,65 @@
+﻿@model IEnumerable<ArticleTag>
+
+<a href="/Management/ArticleTag/Create" class="btn btn-primary">Yeni Ekle</a>
+
+<div class="card radius-15">
+    <div class="card-body">
+        <div class="card-title">
+            <h4 class="mb-0">Etiket/Makale Listesi</h4>
+        </div>
+        <hr>
+        <div class="table-responsive">
+            <table class="table mb-0">
+                <thead>
+                    <tr>
+                        <th scope="col">Makale Adı</th>
+                        <th scope="col">Etiket Adı</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model) {
+                        <tr>
+                            <td>@item.ArticleId - @item.Article.Title</td>
+                            <td>@item.TagId - @item.Tag.Name</td>
+                            <td>
+                                <a class="btn btn-danger"
+                                   href="/Management/ArticleTag/Delete/@item.ArticleId/@item.TagId">Sil</a>
+                                <button class="btn btn-warning" onclick="deleteitem(@item.ArticleId, @item.TagId);">Sil</button>
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+@section ScriptSection { 
+    <script> 
+        function deleteitem(articleid, tagid) {
+            if (confirm("Do you want to save changes?") == true) {
+                alert( "Data saved successfully!");
+            } else {
+                alert( "Save Cancelled!");
+            }
+            $.ajax({
+                type: "POST",
+                url: "/Management/ArticleTag/DeleteByJs/" + articleid + "/" + tagid,
+                data: null,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    alert(response)
+                   
+                },
+                failure: function (response) {
+                    alert(response.responseText);
+                },
+                error: function (response) {
+                    alert(response.responseText);
+                }
+            });
+        }
+    </script>
+}

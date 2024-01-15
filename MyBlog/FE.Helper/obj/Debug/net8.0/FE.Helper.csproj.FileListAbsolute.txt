@@ -1,0 +1,11 @@
+C:\Users\PİKSEL AKADEMİ\Desktop\MyBlog\FE.Helper\bin\Debug\net8.0\FE.Helper.deps.json
+C:\Users\PİKSEL AKADEMİ\Desktop\MyBlog\FE.Helper\bin\Debug\net8.0\FE.Helper.dll
+C:\Users\PİKSEL AKADEMİ\Desktop\MyBlog\FE.Helper\bin\Debug\net8.0\FE.Helper.pdb
+C:\Users\PİKSEL AKADEMİ\Desktop\MyBlog\FE.Helper\obj\Debug\net8.0\FE.Helper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PİKSEL AKADEMİ\Desktop\MyBlog\FE.Helper\obj\Debug\net8.0\FE.Helper.AssemblyInfoInputs.cache
+C:\Users\PİKSEL AKADEMİ\Desktop\MyBlog\FE.Helper\obj\Debug\net8.0\FE.Helper.AssemblyInfo.cs
+C:\Users\PİKSEL AKADEMİ\Desktop\MyBlog\FE.Helper\obj\Debug\net8.0\FE.Helper.csproj.CoreCompileInputs.cache
+C:\Users\PİKSEL AKADEMİ\Desktop\MyBlog\FE.Helper\obj\Debug\net8.0\FE.Helper.dll
+C:\Users\PİKSEL AKADEMİ\Desktop\MyBlog\FE.Helper\obj\Debug\net8.0\refint\FE.Helper.dll
+C:\Users\PİKSEL AKADEMİ\Desktop\MyBlog\FE.Helper\obj\Debug\net8.0\FE.Helper.pdb
+C:\Users\PİKSEL AKADEMİ\Desktop\MyBlog\FE.Helper\obj\Debug\net8.0\ref\FE.Helper.dll

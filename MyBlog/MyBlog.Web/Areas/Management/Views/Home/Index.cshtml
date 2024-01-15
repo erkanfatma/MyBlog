@@ -1,0 +1,94 @@
+﻿@model MyBlog.Web.Models.ViewModels.DashboardViewModel
+
+<div class="row">
+	<div class="col-12 col-lg-3">
+		<div class="card radius-15 bg-voilet">
+			<div class="card-body">
+				<div class="d-flex align-items-center">
+					<div>
+						<h2 class="mb-0 text-white">@Model.ProjectCount <i class="bx bxs-up-arrow-alt font-14 text-white"></i> </h2>
+					</div>
+					<div class="ms-auto font-35 text-white">
+						<i class="bx bx-cart-alt"></i>
+					</div>
+				</div>
+				<div class="d-flex align-items-center">
+					<div>
+						<p class="mb-0 text-white">Proje Toplamı</p>
+					</div> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-12 col-lg-3">
+		<div class="card radius-15 bg-primary-blue">
+			<div class="card-body">
+				<div class="d-flex align-items-center">
+					<div>
+						<h2 class="mb-0 text-white">@Model.ArticleCount <i class="bx bxs-down-arrow-alt font-14 text-white"></i> </h2>
+					</div>
+					<div class="ms-auto font-35 text-white">
+						<i class="bx bx-support"></i>
+					</div>
+				</div>
+				<div class="d-flex align-items-center">
+					<div>
+						<p class="mb-0 text-white">Makale Sayısı</p>
+					</div> 
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-12 col-lg-3">
+		<div class="card radius-15 bg-rose">
+			<div class="card-body">
+				<div class="d-flex align-items-center">
+					<div>
+						<h2 class="mb-0 text-white">@Model.SkillCount <i class="bx bxs-up-arrow-alt font-14 text-white"></i> </h2>
+					</div>
+					<div class="ms-auto font-35 text-white">
+						<i class="bx bx-tachometer"></i>
+					</div>
+				</div>
+				<div class="d-flex align-items-center">
+					<div>
+						<p class="mb-0 text-white">Yetenek Sayısı</p>
+					</div> 
+				</div>
+			</div>
+		</div>
+	</div> 
+</div>
+
+
+<div class="card radius-15">
+	<div class="card-body">
+		<div class="card-title">
+			<h4 class="mb-0">Son 5 Makale</h4>
+		</div>
+		<hr>
+		<div class="table-responsive">
+			<table class="table mb-0">
+				<thead>
+					<tr>
+						<th scope="col">#</th>
+						<th scope="col">Başlık</th>
+						<th scope="col">Konu</th>
+						<th scope="col">Oluşturulma Tarihi</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var item in Model.Articles) {
+						<tr>
+							<th scope="row">@item.Id</th>
+							<td>@item.Title</td>
+							<td>@item.Subject</td>
+							<td>@item.CreatedDate.ToString("dd MMM yyyy HH:mm")</td>
+						</tr>
+					}
+				
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

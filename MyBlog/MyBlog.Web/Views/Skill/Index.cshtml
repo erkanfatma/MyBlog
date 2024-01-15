@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Skill>
+
+<table>
+    <thead>
+        <tr>
+            <th>Başlık</th>
+            <th>Açıklama</th>
+            <th>Puan</th>
+            <th>Durumu</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.Description</td>
+                <td>@item.Score</td>
+                <td>
+                    @if (item.Status)
+                    {
+                        <span>Biliyorum</span>
+                    }
+                    else
+                    {
+                        <span>Bilmiyorum</span>
+                    } 
+                </td>
+            </tr>
+        }
+       
+    </tbody>
+</table>

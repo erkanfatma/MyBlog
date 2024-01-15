@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Article>
+
+	<div class="row">
+		@foreach (var item in Model)
+	{
+		<div class="col-md-12">
+			<div class="blog-entry ftco-animate d-md-flex fadeInUp ftco-animated">
+				 	<div class="text text-2 pl-md-4">
+					<h3 class="mb-2"><a href="single.html">@item.Title</a></h3>
+					<div class="meta-wrap">
+						<p class="meta">
+							<span><i class="icon-calendar mr-2"></i>@item.CreatedDate.ToString("MMMM dd yyyy") </span>
+							<span><a href="single.html"><i class="icon-folder-o mr-2"></i>@item.Subject</a></span>
+					 	</p>
+					</div>
+				@* 	@if (item.Description.Length > 60)
+					{
+						<p class="mb-4">@item.Description.Substring(0, 60) ...</p>
+					} *@
+				
+						<p class="mb-4">@Html.Raw(item.Description)</p>
+					
+
+					<p><a href="#" class="btn-custom">Daha fazla <span class="ion-ios-arrow-forward"></span></a></p>
+				</div>
+			</div>
+		</div>
+	}
+	</div>

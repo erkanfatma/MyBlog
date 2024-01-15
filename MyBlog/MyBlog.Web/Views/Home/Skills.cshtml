@@ -1,0 +1,41 @@
+﻿@model List<Skill>
+
+<form method="get">
+    <input type="text" id="name" name="name" value="@ViewBag.Search" />
+    <input type="text" id="desc" name="desc" value="@ViewBag.Description" />
+    <select id="order" name="order">
+        <option value="0">A-Z</option>
+        <option value="1">Z-A</option>
+        <option value="2">Skor Artan</option>
+    </select>
+    <input type="submit" value="Arama" />
+</form>
+
+<table class="table table-responsive m-3">
+    <thead>
+        <tr>
+            <th>Başlık</th>
+            <th>Açıklama</th>
+            <th>Puan</th>
+            <th>Durumu</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.Count(); i++) {
+            <tr>
+                <td>@Model[i].Title</td>
+                <td>@Model[i].Description</td>
+                <td>@Model[i].Score</td>
+                <td>
+                    @if (Model[i].Status) {
+                        <span>Biliyorum</span>
+                    }
+                    else {
+                        <span>Bilmiyorum</span>
+                    }
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>

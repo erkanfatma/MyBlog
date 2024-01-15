@@ -1,0 +1,26 @@
+﻿@model MainPage
+@* @model MyBlog.Web.Models.MainPage *@
+
+
+<div class="sidebar-box ftco-animate">
+    @if (!string.IsNullOrEmpty(Model.ImageUrl))
+    { 
+        <a href="single.html" class="img">
+            <img src="@Model.ImageUrl"/>
+        </a>
+    }
+    <h3 class="sidebar-heading">@Model.Title</h3>
+    <p>@Model.Description</p>
+</div>
+
+
+@*
+@if (!string.IsNullOrEmpty(Model.ImageUrl))
+{
+    <img src="@Model.ImageUrl" />
+}
+
+<h1>@Model.Title</h1>
+
+<p>@Model.Description</p>
+*@

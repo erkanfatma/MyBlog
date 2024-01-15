@@ -1,0 +1,12 @@
+﻿@model Assignment
+
+
+<div class="card radius-15">
+	<div class="card-body">
+		<h5 class="card-title">@Model.Title</h5> 
+		<p class="text-justify">@Html.Raw(Model.Description)</p>
+		<p class="text-justify">@Model.Deadline.ToString("yyyy/MM/dd")</p>
+
+		<p>@Model.Project.Name</p>
+	</div>
+</div>
