@@ -79,7 +79,9 @@ namespace MyBlog.Web.Controllers {
         }
 
 
-        public IActionResult Privacy() {
+       
+
+        public IActionResult Privacy2() {
             return View();
         }
 
